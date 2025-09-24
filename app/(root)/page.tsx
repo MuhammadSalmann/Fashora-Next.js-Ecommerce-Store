@@ -1,4 +1,5 @@
-// import ProductList from '@/components/shared/product/product-list';
+import ProductList from '@/components/shared/product/product-list';
+import sampleData from '@/db/sample-data';
 // import {
 //   getLatestProducts,
 //   getFeaturedProducts,
@@ -11,14 +12,15 @@
 const Homepage = async () => {
   // const latestProducts = await getLatestProducts();
   // const featuredProducts = await getFeaturedProducts();
+  const sampleProducts = sampleData.products;
 
   return (
     <>
       {/* {featuredProducts.length > 0 && (
         <ProductCarousel data={featuredProducts} />
-      )}
-      <ProductList data={latestProducts} title='Newest Arrivals' limit={4} />
-      <ViewAllProductsButton />
+      )} */}
+      <ProductList data={sampleProducts} title='Newest Arrivals' limit={4} />
+      {/* <ViewAllProductsButton />
       <DealCountdown />
       <IconBoxes /> */}
     </>
